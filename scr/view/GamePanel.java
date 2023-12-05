@@ -85,7 +85,8 @@ public class GamePanel extends JPanel implements MouseListener {
     public void mouseClicked(MouseEvent e) {
 
     }
-
+    
+// method tạo sự kiện cho chuột khi bấm vào ô
     @Override
     public void mousePressed(MouseEvent e) {
         ButtonPlay[][] arrayButton = p2.getArrayButton();

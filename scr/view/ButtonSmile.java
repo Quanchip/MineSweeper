@@ -15,6 +15,7 @@ public class ButtonSmile extends JButton {
         setPreferredSize(new Dimension(50, 50));
     }
 
+    // lấy hình và vẽ mặt cười
     @Override
     public void paint(Graphics g) {
         g.drawImage(p.getGame().getGameFrame().getLoadData().getListImage().get("smile"),0,0,

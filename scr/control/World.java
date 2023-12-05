@@ -40,7 +40,8 @@ public class World {
         }
     }
 
-    private void dienSo() {// điền số mìn vào ô
+    // điền số mìn vào ô
+    private void dienSo() {
         for (int i = 0; i < arrayMin.length; i++) {
             for (int j = 0; j < arrayMin.length; j++) {
                 if(arrayMin[i][j] == 0){
@@ -59,8 +60,8 @@ public class World {
         }
 
     }
-
-    public void creatArrayMin(int boom, int w , int h){ // method để tạo mìn
+// method để tạo mìn
+    public void creatArrayMin(int boom, int w , int h){ 
         int locationX = rd.nextInt(w);  //random vị trí của mìn
         int locationY = rd.nextInt(h);
 

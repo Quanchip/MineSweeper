@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 public class PanelNotification extends JPanel {
 
-    private JPanel   p11, p12, p13;
+    private JPanel   p11, p12, p13;  
 
     private GamePanel game;
 

@@ -18,6 +18,8 @@ public class ButtonPlay extends JButton {
         setPreferredSize(new Dimension(30,30));
     }
 
+
+    // vẽ số bom tùy case
     @Override
     public void paint(Graphics g) {
         switch (number) {
