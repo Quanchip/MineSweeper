@@ -1,10 +1,11 @@
+//This class displays the panel/game grid
+
 package view;
 
-import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
-import javax.swing.JButton;
+
 import javax.swing.JPanel;
 
 public class PanelPlayer extends JPanel {
