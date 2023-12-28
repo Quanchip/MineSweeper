@@ -21,8 +21,8 @@ public class GameFrame extends JFrame {
 	private GamePanel gamePanel;
 
 	private JMenuBar mnb;
-	private JMenu menu;
-	private JMenuItem Easy, nomal, hard, newGame, exit;
+	private JMenu menu, undo_redo;
+	private JMenuItem Easy, nomal, hard, newGame, exit, undo, redo;
 
 	public GameFrame(int w, int h, int boom) {
 
@@ -30,6 +30,7 @@ public class GameFrame extends JFrame {
 
 		setJMenuBar(mnb = new JMenuBar());
 		mnb.add(menu = new JMenu("Game"));
+		mnb.add(undo_redo = new JMenu("Undo/Redo"));
 
 		menu.add(newGame = new JMenuItem("New game"));
 		menu.addSeparator();
@@ -38,6 +39,9 @@ public class GameFrame extends JFrame {
 		menu.add(hard = new JMenuItem("Hard"));
 		menu.addSeparator();
 		menu.add(exit = new JMenuItem("Exit"));
+
+		undo_redo.add(undo = new JMenuItem("Undo"));
+		undo_redo.add(redo = new JMenuItem("Redo"));
 
 		if (w == 8) {
 			Easy.setIcon(new ImageIcon(loadData.getListImage().get("tich")));
@@ -88,6 +92,22 @@ public class GameFrame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
+			}
+		});
+
+		undo.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				gamePanel.undo();
+			}
+		});
+
+		redo.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				gamePanel.redo();
 			}
 		});
 

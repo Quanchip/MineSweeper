@@ -126,7 +126,13 @@ public class GamePanel extends JPanel implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
     }
-
+    // ---------------------Undo and Redo-----------------
+    public void undo() {
+        this.world.undo();
+    } 
+    public void redo() {
+        this.world.redo();
+    }
     // ---------------------Getter and setter-----------------
     public int getW() {
         return w;
