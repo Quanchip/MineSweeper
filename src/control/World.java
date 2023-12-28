@@ -227,7 +227,7 @@ public class World {
 
     // ---------------------------------------
 
-    //Handles doubclicking a cell
+    // Handles doubclicking a cell
     public boolean clickDouble(int i, int j) {
         boolean isCoMin = false;
 
@@ -258,7 +258,7 @@ public class World {
         }
     }
 
-    //Reveal given cell
+    // Reveal given cell
     private void revealCell(int i, int j, int number) {
         this.arrayButton[i][j].setNumber(number);
         this.arrayButton[i][j].repaint();
@@ -267,7 +267,7 @@ public class World {
 
     // ---------------------------------------
 
-    //Set cells across the grid to all true
+    // Set cells across the grid to all true
     public void fullTrue() { // Linear Traversal
         for (int i = 0; i < this.arrayBoolean.length; ++i) {
             for (int j = 0; j < this.arrayBoolean[i].length; ++j) {
